@@ -126,15 +126,15 @@ public class Main extends Component {
         setDataToCell(12, 0, "(сокращенное наименование образовательного учреждения)");
         setDataToCell(14, 0, "№ п/п");
         setDataToCell(14, 1, "№ счета");
-        setDataToCell(14, 2, "Класс");
-        setDataToCell(14, 3, "Ф.И. ребенка");
+        setDataToCell(14, 2, "Ф.И. ребенка");
+        setDataToCell(14, 3, "Класс");
         setDataToCell(14, 4, "Дни посещения");
         setDataToCell(15, 4, "плановые");
         setDataToCell(15, 5, "фактические");
         setDataToCell(14, 6, "Остаток на начало месяца, руб.");
         setDataToCell(14, 7, "Поступило в текущем месяце на питание, руб.");
-        setDataToCell(14, 8, "Израсходовано в текущем месяце на питание, руб.");
-        setDataToCell(14, 9, "Остаток на конец месяца, руб.");
+        setDataToCell(14, 8, "Остаток на конец месяца, руб.");
+        setDataToCell(14, 9, "Израсходовано в текущем месяце на питание, руб.");
         int offset = 16;
         int iterator = 0;
         for (Record record : records) {
