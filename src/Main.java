@@ -126,20 +126,20 @@ public class Main extends Component {
         setDataToCell(12, 0, "(сокращенное наименование образовательного учреждения)");
         setDataToCell(14, 0, "№ п/п");
         setDataToCell(14, 1, "№ счета");
-        setDataToCell(14, 2, "Ф.И. ребенка");
-        setDataToCell(14, 3, "Класс");
+        setDataToCell(14, 2, "Класс");
+        setDataToCell(14, 3, "Ф.И. ребенка");
         setDataToCell(14, 4, "Дни посещения");
         setDataToCell(15, 4, "плановые");
         setDataToCell(15, 5, "фактические");
         setDataToCell(14, 6, "Остаток на начало месяца, руб.");
         setDataToCell(14, 7, "Поступило в текущем месяце на питание, руб.");
-        setDataToCell(14, 8, "Остаток на конец месяца, руб.");
-        setDataToCell(14, 9, "Израсходовано в текущем месяце на питание, руб.");
+        setDataToCell(14, 8, "Израсходовано в текущем месяце на питание, руб.");
+        setDataToCell(14, 9, "Остаток на конец месяца, руб.");
         int offset = 16;
         int iterator = 0;
         for (Record record : records) {
             setDataToCell(offset, 0, String.valueOf(iterator));
-            for (int i = 1; i < 10; i++) {
+            for (int i = 1; i < 10; ++i) {
                 setDataToCell(offset, i, record.getStringValue(i - 1));
             }
             offset++;
@@ -151,13 +151,13 @@ public class Main extends Component {
         sheet.addMergedRegion(new CellRangeAddress(offset + 7, offset + 7, 4, 5));
         setDataToCell(offset + 7, 4, "_____________");
         sheet.addMergedRegion(new CellRangeAddress(offset + 8, offset + 8, 4, 5));
-        setDataToCell(offset + 8, 4, "(подписи сторон)");
+        setDataToCell(offset + 8, 4, "(подпись)");
         setDataToCell(offset + 9, 1, "Заведующий производством предприятия общественного питания");
         sheet.addMergedRegion(new CellRangeAddress(offset + 9, offset + 9, 4, 5));
         setDataToCell(offset + 9, 4, "_____________");
         sheet.addMergedRegion(new CellRangeAddress(offset + 10, offset + 10, 4, 5));
         setDataToCell(offset + 10, 4, "(подпись)");
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 19; ++i) {
             sheet.autoSizeColumn(i);
         }
         File file = new File(savingPath + "/test.xls");
