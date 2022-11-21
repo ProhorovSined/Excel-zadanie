@@ -139,7 +139,7 @@ public class Main extends Component {
         int iterator = 0;
         for (Record record : records) {
             setDataToCell(offset, 0, String.valueOf(iterator));
-            for (int i = 1; i < 10; ++i) {
+            for (int i = 1; i < 10; i++) {
                 setDataToCell(offset, i, record.getStringValue(i - 1));
             }
             offset++;
@@ -157,7 +157,7 @@ public class Main extends Component {
         setDataToCell(offset + 9, 4, "_____________");
         sheet.addMergedRegion(new CellRangeAddress(offset + 10, offset + 10, 4, 5));
         setDataToCell(offset + 10, 4, "(подпись)");
-        for (int i = 0; i < 19; ++i) {
+        for (int i = 0; i < 20; i++) {
             sheet.autoSizeColumn(i);
         }
         File file = new File(savingPath + "/test.xls");
