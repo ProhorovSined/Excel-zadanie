@@ -151,7 +151,7 @@ public class Main extends Component {
         sheet.addMergedRegion(new CellRangeAddress(offset + 7, offset + 7, 4, 5));
         setDataToCell(offset + 7, 4, "_____________");
         sheet.addMergedRegion(new CellRangeAddress(offset + 8, offset + 8, 4, 5));
-        setDataToCell(offset + 8, 4, "(подпись)");
+        setDataToCell(offset + 8, 4, "(подписи сторон)");
         setDataToCell(offset + 9, 1, "Заведующий производством предприятия общественного питания");
         sheet.addMergedRegion(new CellRangeAddress(offset + 9, offset + 9, 4, 5));
         setDataToCell(offset + 9, 4, "_____________");
